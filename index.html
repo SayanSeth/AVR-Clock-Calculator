@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>AVR CLock Calculator</title>
+  </head>
+  <body>
+    <script src="avrtimercalc.js"></script>
+      <table border="1">
+          <tbody><tr>
+          <td>
+              System Clock Frequency (Hz):
+            </td>
+          <td>
+              <input type="text" id="ClkFreq" value="8000000">
+            </td>
+          <td rowspan="3" style="vertical-align:middle; border-left: 1px solid #ededed">&nbsp;&nbsp;Calculate Using</td>
+          </tr>
+          <tr>
+          <td>
+              Timer Resolution:
+            </td>
+          <td>
+              <select id="TimerRes"><option value="8">8 bit</option><option value="16">16 bit</option><option value="32">32 bit</option></select>
+            </td>
+          </tr>
+          <tr>
+          <td>
+              Prescaler:
+            </td>
+          <td>
+              <select id="Prescaler"><option value="1">(1) Clk/1</option><option value="8">(2) Clk/8</option><option value="32">(3) Clk/32</option><option value="64">(4) Clk/64</option><option value="128">(5) Clk/128</option><option value="256">(6) Clk/256</option><option value="1024">(7) Clk/1024</option></select>
+            </td>
+          </tr>
+          <tr>
+          <td>
+              Total Timer Ticks:
+            </td>
+          <td>
+              <input type="text" id="TotalTicks" value="0">
+            </td>
+          <td style="vertical-align:middle; border-left: 1px solid #ededed">
+              <input type="button" value="Total Timer Ticks" onclick="calc_total();">
+            </td>
+          </tr>
+          <tr>
+          <td>
+              Overflow Count:
+            </td>
+          <td>
+              <input type="text" id="Overflows" value="0">
+            </td>
+          <td rowspan="2" style="vertical-align:middle; border-left: 1px solid #ededed">
+              <input type="button" value="Overflows and Remainder" onclick="calc_ofrm();">
+            </td>
+          </tr>
+          <tr>
+          <td>
+              Remainder Timer Ticks:
+            </td>
+          <td>
+              <input type="text" id="Remainder" value="0">
+            </td>
+          </tr>
+          <tr>
+          <td>
+              Real Time (sec):
+            </td>
+          <td>
+              <input type="text" id="RealTime" value="0">
+            </td>
+          <td style="border-left: 1px solid #ededed">
+              <input type="button" value="Real Time" onclick="calc_rt();">
+            </td>
+          </tr>
+          <tr>
+          <td>
+              New Freq (Hz):
+            </td>
+          <td>
+              <input type="text" id="NewFreq" value="0">
+            </td>
+          <td style="border-left: 1px solid #ededed">
+              <input type="button" value="New Frequency" onclick="calc_nf();">
+            </td>
+          </tr>
+          </tbody></table>
+  </body>
+</html>
